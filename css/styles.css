@@ -1,0 +1,373 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2f3136;
+    font-family: 'Roboto Flex', sans-serif;
+    color:#FFFFFF;
+}
+
+.container {
+    width: 900px;
+    height:700px;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+}
+.container p {
+    margin-top: 8px;
+
+}
+.container p a {
+    text-decoration: none;
+}
+
+.container p a:visited {
+    color: #FFFFFF;
+}
+
+
+.input-area {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+    height: 100px;
+    width: 400px;
+    justify-content:center;
+    align-items:center;
+    border-radius:10px;
+    box-shadow: 3px 3px 4px rgba(0,0,0,0.8);
+    transition: all 0.5;
+    padding-bottom: 5px;
+}
+
+.legend {
+    color:#FFFFFF;
+
+}
+
+.input-city {
+    margin-top: 6px;
+    height: 30px;
+    width: 300px;
+    margin-right: 10px;
+    padding-left: 10px;
+    font-size: 0.8em;
+}
+
+.fa-solid.fa-magnifying-glass {
+    color:#b8b8b8;
+}
+
+
+.weather-area {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 99;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+    box-shadow: 3px 3px 4px rgba(0,0,0,0.8);
+    padding-left: 20px;
+    
+}
+
+.input-city.dashboard {
+    margin-top:20px;
+    background: transparent;
+    border:none;
+    color: #FFFFFF;
+    outline: none;
+    font-size: 17px;;
+    width:200px;
+}
+
+.input-city.dashboard::placeholder {
+    color: #bebebe;
+}
+
+.temperature-city-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.todays_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.temperature {
+    margin-top: 20px;
+    font-size: 110px;
+    
+}
+
+.city {
+    margin-top: 20px;
+    font-size: 35px;
+}
+
+
+
+.weekday, .today, .time {
+    margin-top:15px;
+}
+
+.updated_at {
+    margin-top: 5px;
+}
+
+.forecast-details-area {
+    flex:3;
+    padding-right:10px;
+    padding-top:20px;
+    margin-left:10px;
+
+}
+
+.forecast {
+    display: flex;
+    justify-content:space-around;
+}
+
+.days {
+    height:150px;
+    width:150px;
+    display: flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.forecast-temp {
+    margin-top: 7px;
+}
+
+.forecast-days {
+    font-size: 20px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.todays-details {
+    display:flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.todays-detais-title {
+    margin-left: 5px;
+}
+.details-container {
+    width:140px;
+    height: 200px;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-between;
+    padding-top:17px;
+    padding-bottom:17px;
+    background-color: #4d8bff;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.7);
+    margin:5px;
+
+}
+.todays-detais-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.details-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.sunrise, .sunset {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.clouds-pct,.rain-pct,.uv,.windspeed, .humidity-pct, .visibility, .air-quality {
+    font-size: 30px;
+}
+.clouds-description, .rain-probability, .uv-results, .winddirection, .humidity-results, .visibility-results, .air-quality-results {
+    text-align: center;
+    font-size: 17px;
+}
+
+.max-temp {
+    color: #e64040;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
+    margin-right: 3px;
+}
+.min-temp {
+    color: #75d3ff;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
+}
+
+.sunrise img , .sunset img{
+    width:40px;
+}
+.icon {
+    margin-right: 13px;
+}
+
+.footer {
+    text-align: center;
+}
+
+.km {
+    font-size: 20px;;
+}
+
+
+@media (max-width: 450px) {
+
+    .container {
+        margin:0;
+        width: 100vw;
+        height:100vh;
+        flex-direction: column;
+        justify-content:flex-start
+
+    }
+    .input-area {
+        width:100vw;
+        height:100vh;
+        justify-content:flex-start;
+        border-radius: 0;
+    }
+    .legend {
+        margin-top: 20px;
+    }
+
+    .footer {
+        margin-top:-60px;
+    }
+
+
+    .weather-area {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+        background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+        box-shadow: none;
+        flex-direction: column;
+        align-items:center;
+        padding-left:0;
+        
+    }
+    .temperature-city-area {
+        align-items:center;
+        text-align: center;
+    }
+
+    .temperature {
+        margin-top: 5px;
+        font-size: 90px;
+        
+    }
+
+    .todays_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .weekday, .today, .time {
+        margin-top:5px;
+    }
+   
+   
+    .forecast-details-area {
+        padding-right:0;
+        margin-left: 0;
+
+    }
+
+    .forecast {
+        justify-content:space-around;
+        width:100vw;
+
+    }
+    .days  {
+        font-size: 15px;
+        width: 110px;
+    }
+    .forecast {
+        padding-right:15px;
+    }
+
+    .days img {
+        width: 50px
+        
+    }
+
+    .details {
+        align-items:center;
+    }
+
+    .todays-details {
+        align-items: center;
+        justify-content:center;
+    }
+
+    .details-container {
+        
+        width:95px;
+        height: 135px;
+        padding-top:13px;
+        padding-bottom:13px;
+        margin:4px;
+        margin-bottom: 8px;
+    }
+
+
+
+    .clouds-pct,.rain-pct,.uv,.windspeed, .humidity-pct, .visibility, .air-quality {
+        font-size: 23px;
+    }
+    .clouds-description, .rain-probability, .uv-results, .winddirection, .humidity-results, .air-quality-results {
+        font-size: 14px;
+        text-align: center;
+    }
+    
+
+    .sunrise img , .sunset img{
+        width:30px;
+    }
+    .icon {
+        margin-right: 10px;
+    }
+
+    .details-title {
+        font-size: 16px;
+        font-weight: bold;
+    }
+    
+
+}
+
+@media (max-width: 395px) {
+    .weather-area {
+      height:1050px;
+    }
+  }

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/6981151dfe.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,600;8..144,700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="input-area">
+            <legend class="legend">Insira uma cidade<legend>
+            <input type="text" name="city" class="input-city" placeholder="São Paulo"><i class="fa-solid fa-magnifying-glass search"></i>
+        </div>
+
+
+        <div class="weather-area">
+            <div class="temperature-city-area">
+                <div class="input-container">
+                    <input type="text" name="city-dash" class="input-city dashboard" placeholder="Insira outra cidade"> <i class="fa-solid fa-magnifying-glass search-dashboard"></i>
+                </div>
+                <div class="city">São Paulo</div>
+                <div class="temperature">30°C </div>
+                <div class="feels-like">Sensação térmica: 35°C</div>
+                <div class="todays_container">
+                    <div class="weekday">Segunda-Feira</div>
+                    <div class="today">20 Dezembro 2022</div>
+                    <div class="updated_at">Atualizado às 15:00:00</div>
+                </div>
+
+            </div>
+            <div class="forecast-details-area">
+                <div class="forecast">
+                    <div class="days">    
+                        <div class="forecast-days day-1">15/12</div>
+                        <div class="forecast-icon icon-1"><img src="https:////cdn.weatherapi.com/weather/64x64/day/176.png"></div>
+                        <div class="forecast-condition cond-1">Nublado</div>
+                        <div class="forecast-temp"><span class="max-temp max1">30°</span> <span class="min-temp min1">25°</span></div>
+                    </div>
+                    <div class="days">
+                        <div class="forecast-days day-2">15/12</div>
+                        <div class="forecast-icon icon-2"><img src="https:////cdn.weatherapi.com/weather/64x64/day/176.png"></div>
+                        <div class="forecast-condition cond-2">Parciamente Nublado</div>
+                        <div class="forecast-temp"><span class="max-temp max2">30°</span> <span class="min-temp min2">25°</span></div>
+                    </div>
+                    <div class="days">
+                        <div class="forecast-days day-3">15/12</div>
+                        <div class="forecast-icon icon-3"><img src="https:////cdn.weatherapi.com/weather/64x64/day/176.png"></div>
+                        <div class="forecast-condition cond-3">Parciamente Nublado</div>
+                        <div class="forecast-temp"><span class="max-temp max3">30°</span> <span class="min-temp min3">25°</span></div>
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="todays-detais-title">
+                        Condições climáticas de hoje
+                    </div>
+                    <div class="todays-details">
+                        <div class="details-container">
+                            <div class="details-title">Nuvens</div>
+                            <div class="clouds-pct">100 %</div>
+                            <div class="clouds-description">Céu limpo</div>
+                        </div>
+                        <div class="details-container">
+                            <div class="details-title">Chuva</div>
+                            <div class="rain-pct">100 %</div>
+                            <div class="rain-probability">Probabilidade</div>
+                        </div>
+                        <div class="details-container">
+                            <div class="details-title">Índice UV</div>
+                            <div class="uv"></div>
+                            <div class="uv-results"></div>
+                        </div>
+                        <div class="details-container">
+                            <div class="details-title">Vento</div>
+                            <div class="windspeed">30 km/h</div>
+                            <div class="winddirection">NE</div>
+                        </div>
+                        <div class="details-container">
+                            <div class="details-title">Sol</div>
+                            <div class="sunrise">
+                                <div class="icon"><img src="imgs/sunrise.png"></div>
+                                <div class="sunrise-time">06:00</div>
+                            </div>
+                            <div class="sunset">
+                                <div class="icon"><img src="imgs/sunset.png"></div>
+                                <div class="sunset-time">06:00</div>
+                            </div>
+                        </div>
+                        <div class="details-container">
+                            <div class="details-title">Umidade</div>
+                            <div class="humidity-pct">60%</div>
+                            <div class="humidity-results">Normal</div>
+                        </div>
+                        <div class="details-container">
+                            <div class="details-title">Visibilidade</div>
+                            <div class="visibility">10 km</div>
+                            <div class="visibility-results"></div>
+                        </div>
+                        <div class="details-container">
+                            <div class="details-title">Ar</div>
+                            <div class="air-quality">5</div>
+                            <div class="air-quality-results">Moderado</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Desenvolvido por Marcelo Kirino</p>
+            <p>Powered by <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a></p>
+        </div>
+    </div>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
