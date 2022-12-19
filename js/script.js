@@ -16,25 +16,7 @@ let forecastDays = document.querySelectorAll('.forecast-days')
 
 
 
-//Obter Datas
-const dayHour = new Date();
-const today = dayHour.getDate();
-const week = dayHour.getDay();
-const month = dayHour.getMonth();
-const year = dayHour.getFullYear();
-const hour = dayHour.getHours();
-const minute = dayHour.getMinutes();
-const second = dayHour.getSeconds();
 
-//Pegar dia de amanhã e depois
-
-const getTomorrow = new Date();
-getTomorrow.setDate(getTomorrow.getDate() + 1)
-const tomorrow = getTomorrow.getDate();
-
-const getDayAfterTomorrow = new Date();
-getDayAfterTomorrow.setDate(getDayAfterTomorrow.getDate() + 2)
-const dayAfterTomorrow = getDayAfterTomorrow.getDate();
 
 
 //Eventos
@@ -47,6 +29,7 @@ searchInput.addEventListener('click', () => {
     } else {
     getWeather(city)
     showWeather(city)
+    updateHours()
 
     setTimeout(() => {
         inputArea.style.display = 'none';
@@ -63,6 +46,7 @@ initialInput.addEventListener('keypress', (e) => {
     } else {
     getWeather(city)
     showWeather(city)
+    updateHours()
 
     setTimeout(() => {
         inputArea.style.display = 'none';
@@ -80,6 +64,7 @@ searchDashboard.addEventListener('click', () => {
     } else {
     getWeather(city2)
     showWeather(city2)
+    updateHours()
     inputDashboard.value = '';
     }
 })
@@ -94,6 +79,7 @@ inputDashboard.addEventListener('keypress', (e) => {
         } else {
         getWeather(city2)
         showWeather(city2)
+        updateHours()
         inputDashboard.value = '';
     }}
 })
@@ -122,11 +108,7 @@ const showWeather = async (city) => {
 
     document.querySelector('.temperature').innerHTML = `${temperature.toFixed(0)}°C`
     document.querySelector('.feels-like').innerHTML = `Sensação térmica: ${(todaysWeather.current.feelslike_c).toFixed(0)}°C`
-
-    document.querySelector('.weekday').innerHTML = getWeekDay(week);
-    document.querySelector('.today').innerHTML = `${today} de ${getMonth(month)} de ${year}`
-    document.querySelector('.updated_at').innerHTML = `Atualizado às ${zeroFix(hour)}:${zeroFix(minute)}:${zeroFix(second)}`
-    
+   
     document.querySelector('.day-1').innerHTML = `${today}/${month+1}`
     document.querySelector('.icon-1').innerHTML = `<img src="https:${todaysWeather.forecast.forecastday[0].day.condition.icon}">`;
     document.querySelector('.cond-1').innerHTML = todaysWeather.forecast.forecastday[0].day.condition.text;
@@ -319,4 +301,30 @@ function getAirResults (air) {
     }   
     
     
+}
+
+function updateHours() {
+//Obter Datas
+    const dayHour = new Date();
+    const today = dayHour.getDate();
+    const week = dayHour.getDay();
+    const month = dayHour.getMonth();
+    const year = dayHour.getFullYear();
+    const hour = dayHour.getHours();
+    const minute = dayHour.getMinutes();
+    const second = dayHour.getSeconds();
+
+//Pegar dia de amanhã e depois
+
+    const getTomorrow = new Date();
+    getTomorrow.setDate(getTomorrow.getDate() + 1)
+    const tomorrow = getTomorrow.getDate();
+
+    const getDayAfterTomorrow = new Date();
+    getDayAfterTomorrow.setDate(getDayAfterTomorrow.getDate() + 2)
+    const dayAfterTomorrow = getDayAfterTomorrow.getDate();
+    document.querySelector('.weekday').innerHTML = getWeekDay(week);
+    document.querySelector('.today').innerHTML = `${today} de ${getMonth(month)} de ${year}`
+    document.querySelector('.updated_at').innerHTML = `Atualizado às ${zeroFix(hour)}:${zeroFix(minute)}:${zeroFix(second)}`
+
 }
