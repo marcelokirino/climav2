@@ -103,6 +103,23 @@ const showWeather = async (city) => {
 
     //Inserindo dados no HTML
 
+    const dayHour = new Date();
+    const today = dayHour.getDate();
+    const week = dayHour.getDay();
+    const month = dayHour.getMonth();
+    const year = dayHour.getFullYear();
+    const hour = dayHour.getHours();
+    const minute = dayHour.getMinutes();
+    const second = dayHour.getSeconds();
+
+    const getTomorrow = new Date();
+    getTomorrow.setDate(getTomorrow.getDate() + 1)
+    const tomorrow = getTomorrow.getDate();
+
+    const getDayAfterTomorrow = new Date();
+    getDayAfterTomorrow.setDate(getDayAfterTomorrow.getDate() + 2)
+    const dayAfterTomorrow = getDayAfterTomorrow.getDate();
+
     const cityName = todaysWeather.location.name;
     document.querySelector('.city').innerHTML = cityName;
 
